@@ -37,10 +37,10 @@ public class Day0223Q2 {
 		int sum = num*price;
 		System.out.println("총 " + sum + "원 입니다.");
 		
-		int sel = 0;
+		int dc = 0;
 		if(num >= 5) {
-			sel = (sum/10)*9;
-			System.out.println("10프로 할인된 금액 " + sel + "입니다.");
+			dc = (sum/10)*9;
+			System.out.println("10프로 할인된 금액 " + dc + "입니다.");
 		}
 		
 		
