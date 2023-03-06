@@ -1,7 +1,6 @@
 package study.Day0303;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Ex16ArrayLotto {
