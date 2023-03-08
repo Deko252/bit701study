@@ -83,6 +83,7 @@ public class Ex08Q1 {
 			s[i].setPrice(gibon, sudang);
 		}
 		System.out.println("회사명 : " + Employee.EMPNAME);
+		System.out.println("총 사원수 : " + cnt);
 		System.out.print("번호\t사원명\t주소\t기본급\t수당\t세금\t실수령액\n");
 		System.out.println("=".repeat(50));
 		for (Employee employee : s) {
@@ -115,8 +116,8 @@ public class Ex08Q1 {
 		 * “삼성전자” 직원 현황
 		 * 
 		 * 번호 사원명 주소 기본급 수당 세금 실수령액
-		 * —------------------------------------------------------------ 1 이영자 강남구
-		 * 2500000 300000 75000 2725000
+		 * —------------------------------------------------------------ 
+		 * 1 이영자 강남구 2500000 300000 75000 2725000
 		 * 
 		 */
 		
