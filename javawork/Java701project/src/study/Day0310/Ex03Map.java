@@ -3,6 +3,8 @@ package study.Day0310;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.Iterator;
+
 
 public class Ex03Map {
 
@@ -11,7 +13,7 @@ public class Ex03Map {
 		//Map 인터페이스를 구현하는 HashMap, TreeMap
 		//key 와 value 의 쌍으로 저장되는 구조
 		//이때 key의 타입이 Set이다 (중복허용 x , 비순차적)
-		int[]arr ;
+		String[]arr ;
 		Map<String, String>map = new HashMap<>();
 		map.put("name", "이효리");
 		map.put("addr", "강남구");
@@ -35,11 +37,15 @@ public class Ex03Map {
 			String v = map.get(key);
 			System.out.println(key + "=>" + v);
 		}
-		arr = new int[map.size()];
+		
+		System.out.println("=".repeat(30));
+		
+		arr = new String[map.size()];
+		Iterator<String> itr = KeySet.iterator();
 		for (int i = 0; i < map.size(); i++) {
-			arr[i] = map.get(i);
+			arr[i] = itr.next();
 			String v = map.get(arr[i]);
-			System.out.println(i + "=>" + v);
+			System.out.println(arr[i] + "=>" + v);
 		}
 	}
 
