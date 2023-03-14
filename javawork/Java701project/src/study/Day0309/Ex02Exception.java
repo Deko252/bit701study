@@ -12,7 +12,7 @@ class ExcepTest2{
 		su2 = Integer.parseInt(sc.next());
 		
 		System.out.printf("%d + %d = %d\n", su1, su2, su1+su2);
-		System.out.printf("%d / %d = %d\n", su1, su2, (double)(su1/su2));
+		System.out.printf("%d / %d = %d\n", su1, su2, (double)(su1)/su2);
 	}
 }
 
