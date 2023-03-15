@@ -36,3 +36,37 @@
 --주문자  예약일  음식명  음식가격  주문문일(연-월-일 시:분)   인원수 
 --
 --4.레스토랑 메뉴중 전복죽 삭제후 에약 테이블에서도 삭제되었는지 확인하기 
+
+create SEQUENCE seq_food ;
+
+create table restaurant (
+    food_num number(5) CONSTRAINT restaurant_pk_num PRIMARY key,
+    food_name varchar2(30),
+    food_price number(7)
+);
+create table resorder (
+    order_num  number(5)CONSTRAINT resorder_pk_num PRIMARY key,
+    order_name  varchar2(30),
+    food_num number(5),
+    order_day date,
+    jumun_day date,
+    inwon number(3),
+    CONSTRAINT resorder_fk_no foreign key(food_num) references restaurant(food_num) on delete cascade
+);
+
+insert into restaurant values(seq_food.nextval,'스파게티',23000);
+insert into restaurant values(seq_food.nextval,'새우볶음밥',11000);
+insert into restaurant values(seq_food.nextval,'전복죽',19000);
+insert into restaurant values(seq_food.nextval,'새우튀김',10000);
+insert into restaurant values(seq_food.nextval,'짜장면',5000);
+
+insert into resorder values(seq_food.nextval,'이상아',1,'2023-11-20',sysdate,4);
+insert into resorder values(seq_food.nextval,'강호동',2,'2023-12-25',sysdate,3);
+insert into resorder values(seq_food.nextval,'강호동',3,'2023-12-20',sysdate,3);
+insert into resorder values(seq_food.nextval,'이영자',1,'2023-05-11',sysdate,2);
+
+select o.order_name 주문자,o.order_day 예약일, r.food_name 음식명, r.food_price 음식가격,to_char(o.jumun_day,'yyyy-mm-dd-hh:mm')주문일,inwon 인원수
+from restaurant r, resorder o
+where r.food_num = o.food_num;
+
+delete from restaurant where food_num = 3;
