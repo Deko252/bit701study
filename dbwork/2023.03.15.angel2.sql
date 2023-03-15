@@ -184,3 +184,4 @@ drop SEQUENCE seq_stu;
 drop table cart;
 drop table shop;
 drop table person;
+

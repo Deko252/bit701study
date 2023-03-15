@@ -137,3 +137,4 @@ drop SEQUENCE seq4;
 select seq1.nextval,seq3.nextval from dual; --반복해서 실행해본다
 
 select seq1.currval,seq3.currval from dual; --마지막 발생한 값
+commit;
