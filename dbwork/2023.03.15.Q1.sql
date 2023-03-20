@@ -1,41 +1,41 @@
---¿¬½ÀÇÏ¼¼¿ä
+--ì—°ìŠµí•˜ì„¸ìš”
 --
---seq_food ½ÃÄö½º
+--seq_food ì‹œí€€ìŠ¤
 --
---restaurant  Å×ÀÌºí
+--restaurant  í…Œì´ë¸”
 --
---    food_num ±âº»Å°
---    food_name ¹®ÀÚ¿­(30)
---    food_price ¼ıÀÚ(7)
+--    food_num ê¸°ë³¸í‚¤
+--    food_name ë¬¸ìì—´(30)
+--    food_price ìˆ«ì(7)
 --    
 --
---resorder Å×ÀÌºí    
---     order_num ±âº»Å°
---     order_name ¹®ÀÚ¿­(20)
---    food_num  ->restaurant ÀÇ food_num À» ¿ÜºÎÅ°·Î ¼³Á¤(on delete cascade)
---    order_day ³¯Â¥Å¸ÀÔ(¿¹¾à³¯Â¥)
---    jumun_day ³¯Â¥Å¸ÀÔ(ÇöÀç³¯Â¥ÀúÀå)
---    inwon  ¼ıÀÚ(3)
+--resorder í…Œì´ë¸”    
+--     order_num ê¸°ë³¸í‚¤
+--     order_name ë¬¸ìì—´(20)
+--    food_num  ->restaurant ì˜ food_num ì„ ì™¸ë¶€í‚¤ë¡œ ì„¤ì •(on delete cascade)
+--    order_day ë‚ ì§œíƒ€ì…(ì˜ˆì•½ë‚ ì§œ)
+--    jumun_day ë‚ ì§œíƒ€ì…(í˜„ì¬ë‚ ì§œì €ì¥)
+--    inwon  ìˆ«ì(3)
 --    
 --
 --
---1.µ¥ÀÌÅ¸ Ãß°¡ÇÏ±â
---  ½ºÆÄ°ÔÆ¼   23000
---  »õ¿ìººÀ½¹ä 11000
---  Àüº¹Á×  19000
---  »õ¿ìÆ¢±è 10000
---  Â¥Àå¸é 5000
+--1.ë°ì´íƒ€ ì¶”ê°€í•˜ê¸°
+--  ìŠ¤íŒŒê²Œí‹°   23000
+--  ìƒˆìš°ë³¶ìŒë°¥ 11000
+--  ì „ë³µì£½  19000
+--  ìƒˆìš°íŠ€ê¹€ 10000
+--  ì§œì¥ë©´ 5000
 --
---2.ÁÖ¹® Å×ÀÌºí
---ÀÌ»ó¾Æ,  ½ºÆÄ°ÔÆ¼ÁÖ¹®, ¿¹¾àÀÏ 2023-11-20  ÁÖ¹®ÀÏ:ÇöÀç½Ã°£µî·Ï ÀÎ¿ø¼ö :4
---°­È£µ¿,»õ¿ìººÀ½¹ä¹äÁÖ¹®, ¿¹¾àÀÏ 2023-12-25  ÁÖ¹®ÀÏ:ÇöÀç½Ã°£µî·Ï ÀÎ¿ø¼ö :3
---°­È£µ¿,Àüº¹Á×Á×ÁÖ¹®, ¿¹¾àÀÏ 2023-12-20  ÁÖ¹®ÀÏ:ÇöÀç½Ã°£µî·Ï ÀÎ¿ø¼ö :3
---ÀÌ¿µÀÚ, ½ºÆÄ°ÔÆ¼ÁÖ¹®, ¿¹¾àÀÏ 2023-05-11  ÁÖ¹®ÀÏ:ÇöÀç½Ã°£µî·Ï ÀÎ¿ø¼ö :2
+--2.ì£¼ë¬¸ í…Œì´ë¸”
+--ì´ìƒì•„,  ìŠ¤íŒŒê²Œí‹°ì£¼ë¬¸, ì˜ˆì•½ì¼ 2023-11-20  ì£¼ë¬¸ì¼:í˜„ì¬ì‹œê°„ë“±ë¡ ì¸ì›ìˆ˜ :4
+--ê°•í˜¸ë™,ìƒˆìš°ë³¶ìŒë°¥ë°¥ì£¼ë¬¸, ì˜ˆì•½ì¼ 2023-12-25  ì£¼ë¬¸ì¼:í˜„ì¬ì‹œê°„ë“±ë¡ ì¸ì›ìˆ˜ :3
+--ê°•í˜¸ë™,ì „ë³µì£½ì£½ì£¼ë¬¸, ì˜ˆì•½ì¼ 2023-12-20  ì£¼ë¬¸ì¼:í˜„ì¬ì‹œê°„ë“±ë¡ ì¸ì›ìˆ˜ :3
+--ì´ì˜ì, ìŠ¤íŒŒê²Œí‹°ì£¼ë¬¸, ì˜ˆì•½ì¼ 2023-05-11  ì£¼ë¬¸ì¼:í˜„ì¬ì‹œê°„ë“±ë¡ ì¸ì›ìˆ˜ :2
 --
---3.Ãâ·Â
---ÁÖ¹®ÀÚ  ¿¹¾àÀÏ  À½½Ä¸í  À½½Ä°¡°İ  ÁÖ¹®¹®ÀÏ(¿¬-¿ù-ÀÏ ½Ã:ºĞ)   ÀÎ¿ø¼ö 
+--3.ì¶œë ¥
+--ì£¼ë¬¸ì  ì˜ˆì•½ì¼  ìŒì‹ëª…  ìŒì‹ê°€ê²©  ì£¼ë¬¸ë¬¸ì¼(ì—°-ì›”-ì¼ ì‹œ:ë¶„)   ì¸ì›ìˆ˜ 
 --
---4.·¹½ºÅä¶û ¸Ş´ºÁß Àüº¹Á× »èÁ¦ÈÄ ¿¡¾à Å×ÀÌºí¿¡¼­µµ »èÁ¦µÇ¾ú´ÂÁö È®ÀÎÇÏ±â 
+--4.ë ˆìŠ¤í† ë‘ ë©”ë‰´ì¤‘ ì „ë³µì£½ ì‚­ì œí›„ ì—ì•½ í…Œì´ë¸”ì—ì„œë„ ì‚­ì œë˜ì—ˆëŠ”ì§€ í™•ì¸í•˜ê¸° 
 
 create SEQUENCE seq_food ;
 
@@ -54,18 +54,18 @@ create table resorder (
     CONSTRAINT resorder_fk_no foreign key(food_num) references restaurant(food_num) on delete cascade
 );
 
-insert into restaurant values(seq_food.nextval,'½ºÆÄ°ÔÆ¼',23000);
-insert into restaurant values(seq_food.nextval,'»õ¿ìººÀ½¹ä',11000);
-insert into restaurant values(seq_food.nextval,'Àüº¹Á×',19000);
-insert into restaurant values(seq_food.nextval,'»õ¿ìÆ¢±è',10000);
-insert into restaurant values(seq_food.nextval,'Â¥Àå¸é',5000);
+insert into restaurant values(seq_food.nextval,'ìŠ¤íŒŒê²Œí‹°',23000);
+insert into restaurant values(seq_food.nextval,'ìƒˆìš°ë³¶ìŒë°¥',11000);
+insert into restaurant values(seq_food.nextval,'ì „ë³µì£½',19000);
+insert into restaurant values(seq_food.nextval,'ìƒˆìš°íŠ€ê¹€',10000);
+insert into restaurant values(seq_food.nextval,'ì§œì¥ë©´',5000);
 
-insert into resorder values(seq_food.nextval,'ÀÌ»ó¾Æ',1,'2023-11-20',sysdate,4);
-insert into resorder values(seq_food.nextval,'°­È£µ¿',2,'2023-12-25',sysdate,3);
-insert into resorder values(seq_food.nextval,'°­È£µ¿',3,'2023-12-20',sysdate,3);
-insert into resorder values(seq_food.nextval,'ÀÌ¿µÀÚ',1,'2023-05-11',sysdate,2);
+insert into resorder values(seq_food.nextval,'ì´ìƒì•„',1,'2023-11-20',sysdate,4);
+insert into resorder values(seq_food.nextval,'ê°•í˜¸ë™',2,'2023-12-25',sysdate,3);
+insert into resorder values(seq_food.nextval,'ê°•í˜¸ë™',3,'2023-12-20',sysdate,3);
+insert into resorder values(seq_food.nextval,'ì´ì˜ì',1,'2023-05-11',sysdate,2);
 
-select o.order_name ÁÖ¹®ÀÚ,o.order_day ¿¹¾àÀÏ, r.food_name À½½Ä¸í, r.food_price À½½Ä°¡°İ,to_char(o.jumun_day,'yyyy-mm-dd-hh:mm')ÁÖ¹®ÀÏ,inwon ÀÎ¿ø¼ö
+select o.order_name ì£¼ë¬¸ì,o.order_day ì˜ˆì•½ì¼, r.food_name ìŒì‹ëª…, r.food_price ìŒì‹ê°€ê²©,to_char(o.jumun_day,'yyyy-mm-dd-hh:mm')ì£¼ë¬¸ì¼,inwon ì¸ì›ìˆ˜
 from restaurant r, resorder o
 where r.food_num = o.food_num;
 

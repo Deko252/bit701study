@@ -1,140 +1,141 @@
---ppt 23ÆäÀÌÁö
---table »ı¼º (person): ¹øÈ£, ÀÌ¸§, ³ªÀÌ, ¼ºº°, Áö¿ª, ÇöÀç³¯Â¥
+--ppt 23í˜ì´ì§€
+--table ìƒì„± (person): ë²ˆí˜¸, ì´ë¦„, ë‚˜ì´, ì„±ë³„, ì§€ì—­, í˜„ì¬ë‚ ì§œ
 create table person (
     num number(3) PRIMARY key,
     name varchar2(15) not NULL,
     age number(3),
-    gender VARCHAR2(10) DEFAULT '³²ÀÚ',
-    city varchar2(15) DEFAULT '¼­¿ï',
+    gender VARCHAR2(10) DEFAULT 'ë‚¨ì',
+    city varchar2(15) DEFAULT 'ì„œìš¸',
     today DATE
 );
 
---µ¥ÀÌÅÍ Á¶È¸
+--ë°ì´í„° ì¡°íšŒ
 select * from person;
 
 -- insert
 insert into person(num,name,today) VALUES (1,'SexyHong',sysdate);
 
---pk(primary key), nn(not null) ÀÌ °æ¿ì °ªÀ» ¾È³Ö¾îÁÖ¸é ¿À·ù¹ß»ı-È®ÀÎ
-insert into person(name, age, today) VALUES ('±èÃ¶¼ö',23,'2022-09-18');
+--pk(primary key), nn(not null) ì´ ê²½ìš° ê°’ì„ ì•ˆë„£ì–´ì£¼ë©´ ì˜¤ë¥˜ë°œìƒ-í™•ì¸
+insert into person(name, age, today) VALUES ('ê¹€ì² ìˆ˜',23,'2022-09-18');
 
---nn¼Ó¼ºÀÌ µé¾î°£ ÄÃ·³Àº ¹«Á¶°Ç³Ö¾îÁà¾ßÇÑ´Ù,ÀÌ¹ø¿¡´Â num¿¡ °°Àºµ¥ÀÌÅÍ ³Ö¾îº¸±â
-insert into person(num,name, age, today) VALUES (1,'±èÃ¶¼ö',23,'2022-09-18');
+--nnì†ì„±ì´ ë“¤ì–´ê°„ ì»¬ëŸ¼ì€ ë¬´ì¡°ê±´ë„£ì–´ì¤˜ì•¼í•œë‹¤,ì´ë²ˆì—ëŠ” numì— ê°™ì€ë°ì´í„° ë„£ì–´ë³´ê¸°
+insert into person(num,name, age, today) VALUES (1,'ê¹€ì² ìˆ˜',23,'2022-09-18');
 
---¿À·ù¾øÀÌ ³ª¿Àµµ·Ï Á¦µ¥·Î ³Ö¾îº¸ÀÚ
-insert into person(num,name, age, today) VALUES (2,'±èÃ¶¼ö',23,'2022-09-18');
+--ì˜¤ë¥˜ì—†ì´ ë‚˜ì˜¤ë„ë¡ ì œë°ë¡œ ë„£ì–´ë³´ì
+insert into person(num,name, age, today) VALUES (2,'ê¹€ì² ìˆ˜',23,'2022-09-18');
 
---ÀÏºÎ ÄÃ·³ÀÌ ¾Æ´Ï¶ó ¼ø¼­´ë·Î ¸ğµç ÄÃ·³°ªÀ» ³ÖÀ»°æ¿ì ÄÃ·³¸í »ı·«°¡´É
-insert into person VALUES (3,'±èÃ·Áö',52,'¿©ÀÚ','°­³²','1895-05-12');
---°¢°¢ 7°³Á¤µµ Ãß°¡ ÇØº¸ÀÚ
-insert into person VALUES (4,'°í°í°í',2,'¿©ÀÚ','°­³²','1895-05-12');
-insert into person VALUES (5,'ÀÌÀÌÀÌ',5,'³²ÀÚ','°­ºÏ','2023-06-12');
-insert into person VALUES (6,'¾îÀÌ±è',36,'¿©ÀÚ','¼º³²','2012-11-19');
-insert into person VALUES (7,'¾ÆÀÌ±¸',25,'³²ÀÚ','°­¼­','2011-12-17');
-insert into person VALUES (8,'¿ä¸®»ç',89,'¿©ÀÚ','ÀÎÃµ','1999-01-13');
-insert into person VALUES (9,'¹İ°¡¿ö',15,'³²ÀÚ','¿ï»ê','2002-09-17');
-insert into person VALUES (10,'¹Ù³ª³ª',29,'¿©ÀÚ','±¤ÁÖ','2014-04-28');
+--ì¼ë¶€ ì»¬ëŸ¼ì´ ì•„ë‹ˆë¼ ìˆœì„œëŒ€ë¡œ ëª¨ë“  ì»¬ëŸ¼ê°’ì„ ë„£ì„ê²½ìš° ì»¬ëŸ¼ëª… ìƒëµê°€ëŠ¥
+insert into person VALUES (3,'ê¹€ì²¨ì§€',52,'ì—¬ì','ê°•ë‚¨','1895-05-12');
+--ê°ê° 7ê°œì •ë„ ì¶”ê°€ í•´ë³´ì
+insert into person VALUES (4,'ê³ ê³ ê³ ',2,'ì—¬ì','ê°•ë‚¨','1895-05-12');
+insert into person VALUES (5,'ì´ì´ì´',5,'ë‚¨ì','ê°•ë¶','2023-06-12');
+insert into person VALUES (6,'ì–´ì´ê¹€',36,'ì—¬ì','ì„±ë‚¨','2012-11-19');
+insert into person VALUES (7,'ì•„ì´êµ¬',25,'ë‚¨ì','ê°•ì„œ','2011-12-17');
+insert into person VALUES (8,'ìš”ë¦¬ì‚¬',89,'ì—¬ì','ì¸ì²œ','1999-01-13');
+insert into person VALUES (9,'ë°˜ê°€ì›Œ',15,'ë‚¨ì','ìš¸ì‚°','2002-09-17');
+insert into person VALUES (10,'ë°”ë‚˜ë‚˜',29,'ì—¬ì','ê´‘ì£¼','2014-04-28');
 commit;
 
---¹ÚÁö³ªÀÇ age, city ¼öÁ¤
-update person set age=26, city='Á¦ÁÖµµ' where name='¹Ù³ª³ª';
---È«±æµ¿ÀÇ ³ªÀÌ ¼öÁ¤
+--ë°•ì§€ë‚˜ì˜ age, city ìˆ˜ì •
+update person set age=26, city='ì œì£¼ë„' where name='ë°”ë‚˜ë‚˜';
+--í™ê¸¸ë™ì˜ ë‚˜ì´ ìˆ˜ì •
 update person set age=87 where name='SexyHong';
---ÀÌÁøÀÇ today¸¦ ÇöÀç³¯Â¥·Î ¼öÁ¤
-update person set today=sysdate where name='¾îÀÌ±è';
+--ì´ì§„ì˜ todayë¥¼ í˜„ì¬ë‚ ì§œë¡œ ìˆ˜ì •
+update person set today=sysdate where name='ì–´ì´ê¹€';
 commit;
---delete : where Á¶°ÇÀ» ¾È¾²¸é ÀüÃ¼ ¸ğµÎ »èÁ¦µÊ
+--delete : where ì¡°ê±´ì„ ì•ˆì“°ë©´ ì „ì²´ ëª¨ë‘ ì‚­ì œë¨
 delete from person;
 
---´Ù½Ã »ì¸®±â
-rollback; --¸¶Áö¸· Ä¿¹Ô ÀÌÈÄ ±îÁö¸¸ ·Ñ¹é
---Á¶°ÇÀ» ÀÌ¿ëÇØ¼­ »èÁ¦
-delete from person where name='°í°í°í';
+--ë‹¤ì‹œ ì‚´ë¦¬ê¸°
+rollback; --ë§ˆì§€ë§‰ ì»¤ë°‹ ì´í›„ ê¹Œì§€ë§Œ ë¡¤ë°±
+--ì¡°ê±´ì„ ì´ìš©í•´ì„œ ì‚­ì œ
+delete from person where name='ê³ ê³ ê³ ';
 
---³ªÀÌ°¡ 30¼¼ ¹Ì¸¸ÀÎ°æ¿ì ¸ğµÎ »èÁ¦
+--ë‚˜ì´ê°€ 30ì„¸ ë¯¸ë§Œì¸ê²½ìš° ëª¨ë‘ ì‚­ì œ
 delete from person where age <= 30;
 rollback;
 
---Áö±İºÎÅÍ´Â Å×ÀÌºí ±¸Á¶¸¦ ¼öÁ¤ÇÏ´Â ¿¬½À
---Å×ÀÌºí¿¡ ÄÃ·³Ãß°¡
+--ì§€ê¸ˆë¶€í„°ëŠ” í…Œì´ë¸” êµ¬ì¡°ë¥¼ ìˆ˜ì •í•˜ëŠ” ì—°ìŠµ
+--í…Œì´ë¸”ì— ì»¬ëŸ¼ì¶”ê°€
 ALTER table person add score number(3) default(50);
 
---Ãß°¡ÇÑ socre ÄÃ·³À» Á¦°Å
+--ì¶”ê°€í•œ socre ì»¬ëŸ¼ì„ ì œê±°
 ALTER table person drop column score;
 
---ÄÃ·³ Å¸ÀÔ ¼öÁ¤
+--ì»¬ëŸ¼ íƒ€ì… ìˆ˜ì •
 alter table person modify city varchar2(20);
 
---ÄÄ·³¸í º¯°æ today->ipsaday ·Î º¯°æ
+--ì»´ëŸ¼ëª… ë³€ê²½ today->ipsaday ë¡œ ë³€ê²½
 alter table person rename column today to ipsaday;
 
---Á¦¾àÁ¶°ÇÀ» Á¦°Å : name ¿¡ not null Á¦¾àÁ¶°ÇÀÌ µé¾îÀÖ´Ù(Á¦¾àÁ¶°ÇÀÌ¸§¿ï ¾ÈÁà¼­ ±âº»À¸·Î ÀÌ¸§ÀÌ µé¾î°¡ ÀÖ´Ù)
+--ì œì•½ì¡°ê±´ì„ ì œê±° : name ì— not null ì œì•½ì¡°ê±´ì´ ë“¤ì–´ìˆë‹¤(ì œì•½ì¡°ê±´ì´ë¦„ìš¸ ì•ˆì¤˜ì„œ ê¸°ë³¸ìœ¼ë¡œ ì´ë¦„ì´ ë“¤ì–´ê°€ ìˆë‹¤)
 --SYS_C008317
 alter table person drop CONSTRAINT SYS_C008320;
 
---name ¿¡ »õ·Î¿î Á¶°ÇÀ» Ãß°¡ÇØº¸ÀÚ(UNIQUE)
+--name ì— ìƒˆë¡œìš´ ì¡°ê±´ì„ ì¶”ê°€í•´ë³´ì(UNIQUE)
 alter table person ADD CONSTRAINT PERSON_UQ_NAME UNIQUE(NAME);
 
---ÀÌ¸§¿¡ °°Àº ÀÌ¸§À» ³ÊÈï¸é ÀÌÁ¦¿À·ù°¡ ¹ß»ı
---ORA00001: ¹«°á¼º Á¦¾àÁ¶°Ç (ANGEL.PERSON_UQ_NAME¿¡ À§¹èµË´Ï´Ù;
-insert into person (num,name) VALUES(50,'SexyHong'); --¿À·ù
+--ì´ë¦„ì— ê°™ì€ ì´ë¦„ì„ ë„ˆí¥ë©´ ì´ì œì˜¤ë¥˜ê°€ ë°œìƒ
+--ORA00001: ë¬´ê²°ì„± ì œì•½ì¡°ê±´ (ANGEL.PERSON_UQ_NAMEì— ìœ„ë°°ë©ë‹ˆë‹¤;
+insert into person (num,name) VALUES(50,'SexyHong'); --ì˜¤ë¥˜
 
- --gender ¿¡ '³²ÀÚ','¿©ÀÚ'ÀÇ ÀÌ¿ÜÀÇ µ¥ÀÌÅÍ¸¦ ³ÖÀ¸¸é ¿À·ù°¡ ¹ß»ıÇÏ°Ô
- alter table person ADD CONSTRAINT person_CK_GENDER CHECK(GENDER IN('³²ÀÚ','¿©ÀÚ'));
+ --gender ì— 'ë‚¨ì','ì—¬ì'ì˜ ì´ì™¸ì˜ ë°ì´í„°ë¥¼ ë„£ìœ¼ë©´ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ê²Œ
+ alter table person ADD CONSTRAINT person_CK_GENDER CHECK(GENDER IN('ë‚¨ì','ì—¬ì'));
  
- --AGE¿¡ 2 ~ 100 ¼¼¸¸ Ãß°¡ °¡´ÉÇÏµµ·Ï Á¦¾àÁ¶°ÇÀ» Ãß°¡ÇØº¸ÀÚ
+ --AGEì— 2 ~ 100 ì„¸ë§Œ ì¶”ê°€ ê°€ëŠ¥í•˜ë„ë¡ ì œì•½ì¡°ê±´ì„ ì¶”ê°€í•´ë³´ì
  alter table person ADD CONSTRAINT person_CK_AGE check(AGE >=2 AND AGE <= 100);
  
- --Á¦¾àÁ¶°Ç¿¡ À§¹èµÇµµ·Ï ³ªÀÌ¸¦ Ãß°¡ÇØº¸ÀÚ
+ --ì œì•½ì¡°ê±´ì— ìœ„ë°°ë˜ë„ë¡ ë‚˜ì´ë¥¼ ì¶”ê°€í•´ë³´ì
 insert into person (num,name,AGE) VALUES(100,'SexyHong',900);
 
---¹®Á¦
---PKÁ¦¾à Á¶°ÇÀ» Á¦°ÅÈÄ PERSON_PX_NUM ÀÌ¶ó´Â »õ·Î¿î Á¦¾àÁ¶°ÇÀ» Ãß°¡ÇØº¸ÀÚ
---SYS_C008321 Á¦°Å
+--ë¬¸ì œ
+--PKì œì•½ ì¡°ê±´ì„ ì œê±°í›„ PERSON_PX_NUM ì´ë¼ëŠ” ìƒˆë¡œìš´ ì œì•½ì¡°ê±´ì„ ì¶”ê°€í•´ë³´ì
+--SYS_C008321 ì œê±°
 alter table person drop CONSTRAINT  SYS_C008321;
 alter table person ADD CONSTRAINT PERSON_PX_NUM PRIMARY key (num);
 
---¹®Á¦
---BUSEO ¶ó´Â ÄÃ·³À» Ãß°¡ VARCHAR2(10) ±âº»¹ÚÀ» '±³À°ºÎ'
-alter table person add BUSEO VARCHAR2(10) default('±³À°ºÎ');
---BUSEO ¿¡ Á¦¾àÁ¶°Ç Ãß°¡ '±³À°ºÎ','È«º¸ºÎ','ÀÎ»çºÎ' 3°³¸¸ Ãß°¡°¡ °¡´ÉÇÏµµ·Ï
-alter table person ADD CONSTRAINT person_CK_BUSEO check(BUSEO in('±³À°ºÎ','È«º¸ºÎ','ÀÎ»çºÎ'));
-insert into person VALUES (10,'¹Ù³ª³ª',29,'¿©ÀÚ','±¤ÁÖ','2014-04-28','¾ß¶öºÎ');
+--ë¬¸ì œ
+--BUSEO ë¼ëŠ” ì»¬ëŸ¼ì„ ì¶”ê°€ VARCHAR2(10) ê¸°ë³¸ë°•ì„ 'êµìœ¡ë¶€'
+alter table person add BUSEO VARCHAR2(10) default('êµìœ¡ë¶€');
+--BUSEO ì— ì œì•½ì¡°ê±´ ì¶”ê°€ 'êµìœ¡ë¶€','í™ë³´ë¶€','ì¸ì‚¬ë¶€' 3ê°œë§Œ ì¶”ê°€ê°€ ê°€ëŠ¥í•˜ë„ë¡
+alter table person ADD CONSTRAINT person_CK_BUSEO check(BUSEO in('êµìœ¡ë¶€','í™ë³´ë¶€','ì¸ì‚¬ë¶€'));
+insert into person VALUES (10,'ë°”ë‚˜ë‚˜',29,'ì—¬ì','ê´‘ì£¼','2014-04-28','ì•¼ë„ë¶€');
 
---¹®Á¦ ±è¾¾ ¿Í ¹Ù¾¾¼ºÀ» °¡Áø »ç¶÷Àº ¸ğµÎ 'ÀÎ»çºÎ' ·Î µ¥ÀÌÅÍ ¼öÁ¤
-update person set BUSEO='ÀÎ»çºÎ' where name LIKE '±è%' or name LIKE '¹Ù%';
+--ë¬¸ì œ ê¹€ì”¨ ì™€ ë°”ì”¨ì„±ì„ ê°€ì§„ ì‚¬ëŒì€ ëª¨ë‘ 'ì¸ì‚¬ë¶€' ë¡œ ë°ì´í„° ìˆ˜ì •
+update person set BUSEO='ì¸ì‚¬ë¶€' where name LIKE 'ê¹€%' or name LIKE 'ë°”%';
 
--- ÀÌ¾¾ ¾î¾¾ ¾Æ¾¾ ¼ºÀ» »çÁø »ç¶÷µéÀº ¸ğµÎ 'È«º¸ºÎ' ·Î ¼öÁ¤
-update person set BUSEO='È«º¸ºÎ' where name like 'ÀÌ%' or name like '¾î%' or name like'¾Æ%';
+-- ì´ì”¨ ì–´ì”¨ ì•„ì”¨ ì„±ì„ ì‚¬ì§„ ì‚¬ëŒë“¤ì€ ëª¨ë‘ 'í™ë³´ë¶€' ë¡œ ìˆ˜ì •
+update person set BUSEO='í™ë³´ë¶€' where name like 'ì´%' or name like 'ì–´%' or name like'ì•„%';
 
---¹®Á¦
---³²ÀÚ ¿©ÀÚ Æò±Õ ³ªÀÌ (Á¤¼ö) ±¸ÇÏ±â - ÀÎ¿ø¼ö°¡ ¸¹Àº°Í ºÎÅÍ Ãâ·Â
+--ë¬¸ì œ
+--ë‚¨ì ì—¬ì í‰ê·  ë‚˜ì´ (ì •ìˆ˜) êµ¬í•˜ê¸° - ì¸ì›ìˆ˜ê°€ ë§ì€ê²ƒ ë¶€í„° ì¶œë ¥
 alter table person add avg number(3,0);
 
-select ceil(avg(age)) as ³²ÀÚ from person where GENDER = '³²ÀÚ';
-select ceil(avg(age)) ¿©ÀÚ from person where GENDER = '¿©ÀÚ';
+select ceil(avg(age)) as ë‚¨ì from person where GENDER = 'ë‚¨ì';
+select ceil(avg(age)) ì—¬ì from person where GENDER = 'ì—¬ì';
 
-select gender ¼ºº°, count(*) ÀÎ¿ø¼ö, ceil(avg(age)) Æò±Õ³ªÀÌ from person group by gender order by 2 desc;
+-- ì¸ì›ìˆ˜(2) ë‚´ë¦¼ ì°¨ìˆœ ì •ë ¬
+select gender ì„±ë³„, count(*) ì¸ì›ìˆ˜, ceil(avg(age)) í‰ê· ë‚˜ì´ from person group by gender order by 2 desc;
 
---ºÎ¼­º°·Î ÀÎ¿ø¼ö¿Í Æò±Õ ³ªÀÌ ±¸ÇÏ±â - ºÎ¼­¸íÀÇ ¿À¸§Â÷¼ø Ãâ·Â
-select buseo ºÎ¼­¸í, count(*) ÀÎ¿ø¼ö, ceil(avg(age)) Æò±Õ³ªÀÌ from person group by buseo order by 1;
+--ë¶€ì„œë³„(1)ë¡œ ì¸ì›ìˆ˜ì™€ í‰ê·  ë‚˜ì´ êµ¬í•˜ê¸° - ë¶€ì„œëª…ì˜ ì˜¤ë¦„ì°¨ìˆœ ì¶œë ¥
+select buseo ë¶€ì„œëª…, count(*) ì¸ì›ìˆ˜, ceil(avg(age)) í‰ê· ë‚˜ì´ from person group by buseo order by 1;
 
---½ÃÄö½º »ı¼ºÇÏ´Â ¹æ¹ı ppt 78 ÆäÀÌÁö
---°¡Àå ¸¹ÀÌ »ç¿ëÇÏ´Â ±âº» ½ÃÄö½º : 1ºÎÅÍ 1¾¿ Áõ°¡ÇÏ´Â ½ÃÄö½º
+--ì‹œí€€ìŠ¤ ìƒì„±í•˜ëŠ” ë°©ë²• ppt 78 í˜ì´ì§€
+--ê°€ì¥ ë§ì´ ì‚¬ìš©í•˜ëŠ” ê¸°ë³¸ ì‹œí€€ìŠ¤ : 1ë¶€í„° 1ì”© ì¦ê°€í•˜ëŠ” ì‹œí€€ìŠ¤
 create SEQUENCE seq1;
-create SEQUENCE seq2 start with 10 increment by 10; --10¿¡¼­ºÎÅÍ 10¾¿ Áõ°¡
-create SEQUENCE seq3 start with 10 increment by 5 nocache; --nocache : cache¸¦ 0À¸·Î
-create SEQUENCE seq4 MAXVALUE 100; --max °ªÀÌ 100±îÁö¸¸ ¹ß»ı
---½ÃÄö½º Á¶È¸
+create SEQUENCE seq2 start with 10 increment by 10; --10ì—ì„œë¶€í„° 10ì”© ì¦ê°€
+create SEQUENCE seq3 start with 10 increment by 5 nocache; --nocache : cacheë¥¼ 0ìœ¼ë¡œ
+create SEQUENCE seq4 MAXVALUE 100; --max ê°’ì´ 100ê¹Œì§€ë§Œ ë°œìƒ
+--ì‹œí€€ìŠ¤ ì¡°íšŒ
 select * from seq;
---Å×ÀÌºí Á¶È¸
+--í…Œì´ë¸” ì¡°íšŒ
 select * from tab;
---½ÃÄö½º Á¦°Å
+--ì‹œí€€ìŠ¤ ì œê±°
 drop SEQUENCE seq2;
 drop SEQUENCE seq4;
 
---´ÙÀ½°ª ¹ß»ı nextval, ÇöÀç°ª  currval
-select seq1.nextval,seq3.nextval from dual; --¹İº¹ÇØ¼­ ½ÇÇàÇØº»´Ù
+--ë‹¤ìŒê°’ ë°œìƒ nextval, í˜„ì¬ê°’  currval
+select seq1.nextval,seq3.nextval from dual; --ë°˜ë³µí•´ì„œ ì‹¤í–‰í•´ë³¸ë‹¤
 
-select seq1.currval,seq3.currval from dual; --¸¶Áö¸· ¹ß»ıÇÑ °ª
+select seq1.currval,seq3.currval from dual; --ë§ˆì§€ë§‰ ë°œìƒí•œ ê°’
 commit;

@@ -1,0 +1,13 @@
+root 접속
+
+create database bit701
+
+angel 계정 생성
+
+	create user angel@'%' identified by '1234'; -- 계정 생성
+	grant all privileges on *.* to angel@'%' with grant option; -- 권한
+	flush privileges; -- 권한 테이블 변경
+	select User from user; -- 확인
+
+
+워크벤치에서 angel 연결해서 실습

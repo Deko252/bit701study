@@ -1,6 +1,6 @@
---¹®Á¦
---ÅÂÀÌºí »ı¼º (student) : num  ¼ıÀÚ(5) , name ¹®ÀÚ¿­(10), height ¼ıÀÚ(5,1),
---java ¼ıÀÚ(3) ±âº»°ª 10, spring ¼ıÀÚ(3) ±âº»°ª(10), ban ¹®ÀÚ¿­(20)
+--ë¬¸ì œ
+--íƒœì´ë¸” ìƒì„± (student) : num  ìˆ«ì(5) , name ë¬¸ìì—´(10), height ìˆ«ì(5,1),
+--java ìˆ«ì(3) ê¸°ë³¸ê°’ 10, spring ìˆ«ì(3) ê¸°ë³¸ê°’(10), ban ë¬¸ìì—´(20)
 create table student (
      num number(5),
      name varchar2(10),
@@ -12,51 +12,51 @@ create table student (
 
 select * from student;
 
---½ÃÄö½º »ı¼º seq_stu ±âº»(1ºÎÅÍ 1¾¿Áõ°¡), nocache Ãß°¡
+--ì‹œí€€ìŠ¤ ìƒì„± seq_stu ê¸°ë³¸(1ë¶€í„° 1ì”©ì¦ê°€), nocache ì¶”ê°€
 create SEQUENCE seq_stu nocache;
 select * from seq;
---Á¦¾àÁ¶°Çµé Ãß°¡
---num ¿¡ primary key Ãß°¡
+--ì œì•½ì¡°ê±´ë“¤ ì¶”ê°€
+--num ì— primary key ì¶”ê°€
 ALTER table student add CONSTRAINT student_PK_NUM  PRIMARY key (num);
 
---java,spring Àº 1~100¸¸ °¡´ÉÇÏµµ·Ï check Á¦¾àÁ¶°Ç Ãß°¡
+--java,spring ì€ 1~100ë§Œ ê°€ëŠ¥í•˜ë„ë¡ check ì œì•½ì¡°ê±´ ì¶”ê°€
  alter table student ADD CONSTRAINT student_CK_java check(java >=1 AND java <= 100);
  alter table student ADD CONSTRAINT student_CK_spring check(spring >=1 AND spring <= 100);
  
---ban Àº 'ÇŞ´Ô¹İ','´Ş´Ô¹İ','º°´Ô¹İ' ¸¸ Ãß°¡ÇÒ¼ö ÀÖµµ·Ï check Ãß°¡
- alter table student ADD CONSTRAINT student_CK_ban check(ban in('ÇŞ´Ô¹İ','´Ş´Ô¹İ','º°´Ô¹İ'));
+--ban ì€ 'í–‡ë‹˜ë°˜','ë‹¬ë‹˜ë°˜','ë³„ë‹˜ë°˜' ë§Œ ì¶”ê°€í• ìˆ˜ ìˆë„ë¡ check ì¶”ê°€
+ alter table student ADD CONSTRAINT student_CK_ban check(ban in('í–‡ë‹˜ë°˜','ë‹¬ë‹˜ë°˜','ë³„ë‹˜ë°˜'));
 
---5°³ Á¤µµ µ¥ÀÌÅÍ Ãß°¡
-insert into student (num,name,java,height,ban) VALUES(seq_stu.NEXTVAL, '¿ÀÁö¿À',89,179.2,'ÇŞ´Ô¹İ');
-insert into student values (seq_stu.nextval,'ÀÌÈ¿¸®',178.5,67.5,88,'´Ş´Ô¹İ');
-insert into student values (seq_stu.nextval,'¾Æ¶ó¸®',189.5,60.5,88,'º°´Ô¹İ');
-insert into student values (seq_stu.nextval,'¿À·Î¸®',125.5,13.5,88,'ÇŞ´Ô¹İ');
-insert into student values (seq_stu.nextval,'ÀÌ¿ì¸®',75.5,18.5,88,'´Ş´Ô¹İ');
+--5ê°œ ì •ë„ ë°ì´í„° ì¶”ê°€
+insert into student (num,name,java,height,ban) VALUES(seq_stu.NEXTVAL, 'ì˜¤ì§€ì˜¤',89,179.2,'í–‡ë‹˜ë°˜');
+insert into student values (seq_stu.nextval,'ì´íš¨ë¦¬',178.5,67.5,88,'ë‹¬ë‹˜ë°˜');
+insert into student values (seq_stu.nextval,'ì•„ë¼ë¦¬',189.5,60.5,88,'ë³„ë‹˜ë°˜');
+insert into student values (seq_stu.nextval,'ì˜¤ë¡œë¦¬',125.5,13.5,88,'í–‡ë‹˜ë°˜');
+insert into student values (seq_stu.nextval,'ì´ìš°ë¦¬',75.5,18.5,88,'ë‹¬ë‹˜ë°˜');
 
 commit;
 
---numÀÌ 6ÀÌ»ó ¸ğµÎ»èÁ¦
+--numì´ 6ì´ìƒ ëª¨ë‘ì‚­ì œ
 delete from student where num >=6;
---numÀÌ 3ÀÎ »ç¶÷ÀÇ javaÁ¡¼ö¸¦ 99·Î , banÀ» '´Ş´Ô¹İ'À¸·Î ¼öÁ¤
-update student set ban = '´Ş´Ô¹İ', java = 99 where num=3;
---num=4 ÀÎ»ç¶÷ÀÇ Å°¸¦ 188.9·Î ¼öÁ¤
+--numì´ 3ì¸ ì‚¬ëŒì˜ javaì ìˆ˜ë¥¼ 99ë¡œ , banì„ 'ë‹¬ë‹˜ë°˜'ìœ¼ë¡œ ìˆ˜ì •
+update student set ban = 'ë‹¬ë‹˜ë°˜', java = 99 where num=3;
+--num=4 ì¸ì‚¬ëŒì˜ í‚¤ë¥¼ 188.9ë¡œ ìˆ˜ì •
 update student set height = 188.9 where num = 4;
---num2 ÀÎ µ¥ÀÌÅÍ »èÁ¦
+--num2 ì¸ ë°ì´í„° ì‚­ì œ
 delete from student where num =2;
---Á¶È¸ ÀÌ¸§ ¹İ ÀÚ¹Ù ½ºÇÁ¸µ ÃÑÁ¡ Æò±Õ
-select name ÀÌ¸§ ,ban ¹İ, java ÀÚ¹Ù , spring ½ºÇÁ¸µ , java+spring ÃÑÁ¡, (java+spring)/2 Æò±Õ from student order by ÃÑÁ¡ desc;
+--ì¡°íšŒ ì´ë¦„ ë°˜ ìë°” ìŠ¤í”„ë§ ì´ì  í‰ê· 
+select name ì´ë¦„ ,ban ë°˜, java ìë°” , spring ìŠ¤í”„ë§ , java+spring ì´ì , (java+spring)/2 í‰ê·  from student order by ì´ì  desc;
 commit;
 
---DB Á¤±ÔÈ­(Normalization)
---Á¤±ÔÈ­¶õ ? ÇÑ¸¶ÀÌ·Î DB¼­¹öÀÇ ¸Ş¸ğ¸®¸¦ ³¶ºñÇÏÁö ¾Ê±â À§ÇØ¼­ ¾î¶² Å×ÀÌºí ½Äº°ÀÚ¸¦ °¡Áö´Â ¿©·¯°³ÀÇ Å×ÀÌºí·Î ³ª´©´Â °úÁ¤À» Á¤±ÔÈ­¶ó°í ÇÑ´Ù
---Á¤±ÔÈ­µÈ µ¥ÀÌÅÍº£ÀÌ´Â Áßº¹ÀÇ ÃÖ¼ÒÈ­ µÇµµ·Ï ¼³°èµÈ µ¥ÀÌÅÍ º£ÀÌ½º´Ù
---ÀåÁ¡ : ¸Ş¸ğ¸®¸¦ Àı¾àÇÒ¼ö ÀÕ´Ù
---        ±¸Á¶È­µÈ ½Ã½ºÅÛÀ¸·Î ÀÎÇØ¼­ °ü¸®°¡ ÆíÇÏ´Ù
---´ÜÀú : Á¶È¸ºñÀ²ÀÌ ¸Å¿ì³ôÀº ½Ã½ºÅÛÀÇ °æ¿ì¿¡´Â Å×ÀÌºí°£ÀÇ join ¿¬»êÀÌ ¹İº¹ÀûÀ¸·Î
---        ÀÌ·ç¾îÁö±â ¶§¹®¿¡ ÁúÀÇ ÀÀ´ä¼Óµµ°¡ »ìÂ¦ ´Ê¾îÁú¼öÀÖ´Ù.
+--DB ì •ê·œí™”(Normalization)
+--ì •ê·œí™”ë€ ? í•œë§ˆì´ë¡œ DBì„œë²„ì˜ ë©”ëª¨ë¦¬ë¥¼ ë‚­ë¹„í•˜ì§€ ì•Šê¸° ìœ„í•´ì„œ ì–´ë–¤ í…Œì´ë¸” ì‹ë³„ìë¥¼ ê°€ì§€ëŠ” ì—¬ëŸ¬ê°œì˜ í…Œì´ë¸”ë¡œ ë‚˜ëˆ„ëŠ” ê³¼ì •ì„ ì •ê·œí™”ë¼ê³  í•œë‹¤
+--ì •ê·œí™”ëœ ë°ì´í„°ë² ì´ëŠ” ì¤‘ë³µì˜ ìµœì†Œí™” ë˜ë„ë¡ ì„¤ê³„ëœ ë°ì´í„° ë² ì´ìŠ¤ë‹¤
+--ì¥ì  : ë©”ëª¨ë¦¬ë¥¼ ì ˆì•½í• ìˆ˜ ì‡ë‹¤
+--        êµ¬ì¡°í™”ëœ ì‹œìŠ¤í…œìœ¼ë¡œ ì¸í•´ì„œ ê´€ë¦¬ê°€ í¸í•˜ë‹¤
+--ë‹¨ì € : ì¡°íšŒë¹„ìœ¨ì´ ë§¤ìš°ë†’ì€ ì‹œìŠ¤í…œì˜ ê²½ìš°ì—ëŠ” í…Œì´ë¸”ê°„ì˜ join ì—°ì‚°ì´ ë°˜ë³µì ìœ¼ë¡œ
+--        ì´ë£¨ì–´ì§€ê¸° ë•Œë¬¸ì— ì§ˆì˜ ì‘ë‹µì†ë„ê°€ ì‚´ì§ ëŠ¦ì–´ì§ˆìˆ˜ìˆë‹¤.
 
---studentÀÇ numÀ» ¿ÜºÎÅ°·Î °®´Â »õ·Î¿î Å×ÀÌºí stuinfo ¸¦ ¸¸µé¾îº¸ÀÚ
---¿ÜºÎÅ°´Â Å×ÀÌºí »ı¼º½Ã ¼³Á¤ÇØµµ µÇ°í ÀÏ´Ü »ı¼ºÈÄ Å×ÀÌºí ¼öÁ¤À¸·Î Ãß°¡ÇØµµ µÈ´Ù.
+--studentì˜ numì„ ì™¸ë¶€í‚¤ë¡œ ê°–ëŠ” ìƒˆë¡œìš´ í…Œì´ë¸” stuinfo ë¥¼ ë§Œë“¤ì–´ë³´ì
+--ì™¸ë¶€í‚¤ëŠ” í…Œì´ë¸” ìƒì„±ì‹œ ì„¤ì •í•´ë„ ë˜ê³  ì¼ë‹¨ ìƒì„±í›„ í…Œì´ë¸” ìˆ˜ì •ìœ¼ë¡œ ì¶”ê°€í•´ë„ ëœë‹¤.
 --ppt 29p
 create table stuinfo(
     idx number(5) constraint info_pk_idx PRIMARY key,
@@ -65,68 +65,68 @@ create table stuinfo(
     hp varchar2(15)
 );
 
---¿ÜºÎÅ° Á¦¾àÁ¶°Ç Ãß°¡
---stuinfoÀÇ num Àº studnetÀÇ num°ª¸¸ ³ÖÀ»¼ö ÀÖµµ·Ï ¼³Á¤
+--ì™¸ë¶€í‚¤ ì œì•½ì¡°ê±´ ì¶”ê°€
+--stuinfoì˜ num ì€ studnetì˜ numê°’ë§Œ ë„£ì„ìˆ˜ ìˆë„ë¡ ì„¤ì •
 alter table stuinfo add constraint info_fk_num foreign key(num) references student(num);
 
---stuinfo ÀÇ num¿¡ ¸¸¾à 3À» Ãß°¡Çß´Ù¸é student Å×ÀÌºí¿¡¼­ num=3ÀÎ µ¥¾îÅÍ´Â »èÁ¦ÇÒ¼ö¾ø´Ù
---Á¦¾àÁ¶°Ç Ãß°¡½Ã on delete cascade ¸¦ Ãß°¡ÇßÀ»°æ¿ì´Â ºÎ¸ğÅ×ÀÌºíÀÇ num=3ÀÎ µ¥ÀÌÅÍ »èÁ¦½Ã
---stuinfoÀÇ num=3ÀÎ ¸ğµç µ¥ÀÌÅÍ´Â ÀÚµ¿ »èÁ¦µÈ´Ù
+--stuinfo ì˜ numì— ë§Œì•½ 3ì„ ì¶”ê°€í–ˆë‹¤ë©´ student í…Œì´ë¸”ì—ì„œ num=3ì¸ ë°ì–´í„°ëŠ” ì‚­ì œí• ìˆ˜ì—†ë‹¤
+--ì œì•½ì¡°ê±´ ì¶”ê°€ì‹œ on delete cascade ë¥¼ ì¶”ê°€í–ˆì„ê²½ìš°ëŠ” ë¶€ëª¨í…Œì´ë¸”ì˜ num=3ì¸ ë°ì´í„° ì‚­ì œì‹œ
+--stuinfoì˜ num=3ì¸ ëª¨ë“  ë°ì´í„°ëŠ” ìë™ ì‚­ì œëœë‹¤
 
---stuinfo ¿¡ µ¥ÀÌÅÍ Ãß°¡ÇÏ±â
-insert into stuinfo values (seq_stu.nextval,3,'¼­¿ï½Ã °­³²±¸','010-2222-3333');
+--stuinfo ì— ë°ì´í„° ì¶”ê°€í•˜ê¸°
+insert into stuinfo values (seq_stu.nextval,3,'ì„œìš¸ì‹œ ê°•ë‚¨êµ¬','010-2222-3333');
 
---student¿¡ ¾ø´Â 2¹øÀ» Ãß°¡ÇØº¸
---ORA-02291: ¹«°á¼º Á¦¾àÁ¶°Ç(ANGEL.INFO_FK_NUM)ÀÌ À§¹èµÇ¾ú½À´Ï´Ù- ºÎ¸ğ Å°°¡ ¾ø½À´Ï´Ù
-insert into  stuinfo values (seq_stu.nextval,2,'¼­¿ï½Ã °­µ¿±¸','010-4444-5555');
+--studentì— ì—†ëŠ” 2ë²ˆì„ ì¶”ê°€í•´ë³´
+--ORA-02291: ë¬´ê²°ì„± ì œì•½ì¡°ê±´(ANGEL.INFO_FK_NUM)ì´ ìœ„ë°°ë˜ì—ˆìŠµë‹ˆë‹¤- ë¶€ëª¨ í‚¤ê°€ ì—†ìŠµë‹ˆë‹¤
+insert into  stuinfo values (seq_stu.nextval,2,'ì„œìš¸ì‹œ ê°•ë™êµ¬','010-4444-5555');
 
---´Ù½Ã 4¹øÀ¸·Î Ãß°¡
-insert into  stuinfo values (seq_stu.nextval,4,'¼­¿ï½Ã °­µ¿±¸','010-6666-7777');
+--ë‹¤ì‹œ 4ë²ˆìœ¼ë¡œ ì¶”ê°€
+insert into  stuinfo values (seq_stu.nextval,4,'ì„œìš¸ì‹œ ê°•ë™êµ¬','010-6666-7777');
 
---ORA-02291: ¹«°á¼º Á¦¾àÁ¶°Ç(ANGEL.INFO_FK_NUM)ÀÌ À§¹èµÇ¾ú½À´Ï´Ù- ºÎ¸ğ Å°°¡ ¾ø½À´Ï´Ù
-insert into  stuinfo values (seq_stu.nextval,5,'ÀÎÃµ½Ã ³²±¸','010-8888-9999');
+--ORA-02291: ë¬´ê²°ì„± ì œì•½ì¡°ê±´(ANGEL.INFO_FK_NUM)ì´ ìœ„ë°°ë˜ì—ˆìŠµë‹ˆë‹¤- ë¶€ëª¨ í‚¤ê°€ ì—†ìŠµë‹ˆë‹¤
+insert into  stuinfo values (seq_stu.nextval,5,'ì¸ì²œì‹œ ë‚¨êµ¬','010-8888-9999');
 commit;
 
---Á¶È¸
---°¢°¢ Á¶È¸¸¦ ÇÒ °æ¿ì ¸ğµç Á¤º¸¸¦ ¾Ë¼ö ¾ø´Ù
+--ì¡°íšŒ
+--ê°ê° ì¡°íšŒë¥¼ í•  ê²½ìš° ëª¨ë“  ì •ë³´ë¥¼ ì•Œìˆ˜ ì—†ë‹¤
 select * from student;
 select * from stuinfo;
 
---joinÀ¸·Î µÎ Å×ÀÌºíÀ» ÇÕÃÄ¼­ ÇÊ¿äÇÑ Á¤º¸¸¦ °¡Áö°í ¿Íº¸ÀÚ
+--joinìœ¼ë¡œ ë‘ í…Œì´ë¸”ì„ í•©ì³ì„œ í•„ìš”í•œ ì •ë³´ë¥¼ ê°€ì§€ê³  ì™€ë³´ì
 --ppt 43p
---inner join ¶Ç´Â equi join ÀÌ¶ó°í ÇÑ´Ù . ¼­·Î num °ªÀÌ °°À» °æ¿ì¿¡¸¸ °¡Á®¿Â´Ù
-select sd.num ½ÃÄö½º, sd.name ÇĞ»ı¸í, sd.height Å°, sd.ban ¹İ, si.addr ÁÖ¼Ò, si.hp ÇÚµåÆù ,sd.java ÀÚ¹Ù, sd.spring ½ºÇÁ¸µ 
+--inner join ë˜ëŠ” equi join ì´ë¼ê³  í•œë‹¤ . ì„œë¡œ num ê°’ì´ ê°™ì„ ê²½ìš°ì—ë§Œ ê°€ì ¸ì˜¨ë‹¤
+select sd.num ì‹œí€€ìŠ¤, sd.name í•™ìƒëª…, sd.height í‚¤, sd.ban ë°˜, si.addr ì£¼ì†Œ, si.hp í•¸ë“œí° ,sd.java ìë°”, sd.spring ìŠ¤í”„ë§ 
 from student sd, stuinfo si
 where sd.num = si.num;
 
---ÀÌ‹š ¾çÂÊÅ×ÀÌºí¿¡ °øÅëÀûÀ¸·Î °¡Áö°íÀÖ´Â ÄÃ·³À» Á¦¿ÜÇÏ°í´Â ¾Õ¿¡ Å×ÀÌºí¸í »ı·«°¡´É
-select sd.num ½ÃÄö½º, name ÇĞ»ı¸í, height Å°, ban ¹İ, addr ÁÖ¼Ò, hp ÇÚµåÆù ,java ÀÚ¹Ù, spring ½ºÇÁ¸µ 
+--ì´ë–„ ì–‘ìª½í…Œì´ë¸”ì— ê³µí†µì ìœ¼ë¡œ ê°€ì§€ê³ ìˆëŠ” ì»¬ëŸ¼ì„ ì œì™¸í•˜ê³ ëŠ” ì•ì— í…Œì´ë¸”ëª… ìƒëµê°€ëŠ¥
+select sd.num ì‹œí€€ìŠ¤, name í•™ìƒëª…, height í‚¤, ban ë°˜, addr ì£¼ì†Œ, hp í•¸ë“œí° ,java ìë°”, spring ìŠ¤í”„ë§ 
 from student sd, stuinfo si
 where sd.num = si.num;
 
---outer join À¸·Î Ãß°¡µÇÁö ¾ÊÀº µ¥ÀÌÅÍ¸¦ Ã£¾Æº¸ÀÚ
---sub Å×ÀÌºí ÂÊ¿¡ (+)
-select sd.num ½ÃÄö½º, name ÇĞ»ı¸í, height Å°, ban ¹İ, addr ÁÖ¼Ò, hp ÇÚµåÆù ,java ÀÚ¹Ù, spring ½ºÇÁ¸µ 
+--outer join ìœ¼ë¡œ ì¶”ê°€ë˜ì§€ ì•Šì€ ë°ì´í„°ë¥¼ ì°¾ì•„ë³´ì
+--sub í…Œì´ë¸” ìª½ì— (+)
+select sd.num ì‹œí€€ìŠ¤, name í•™ìƒëª…, height í‚¤, ban ë°˜, addr ì£¼ì†Œ, hp í•¸ë“œí° ,java ìë°”, spring ìŠ¤í”„ë§ 
 from student sd, stuinfo si
 where sd.num = si.num(+) and addr is null;
 
---student(ºÎ¸ğÅ×ÀÌºí) ÀÇ num = 1ÀÎ µ¥ÀÌÅÍ »èÁ¦ÇØº¸ÀÚ
---ORA-02292: ¹«°á¼º Á¦¾àÁ¶°Ç(ANGEL.INFO_FK_NUM)ÀÌ À§¹èµÇ¾ú½À´Ï´Ù- ÀÚ½Ä ·¹ÄÚµå°¡ ¹ß°ßµÇ¾ú½À´Ï´Ù
---ÀÌ°æ¿ì ¸¸¾à »èÁ¦·ê ÇÏ°í½ÍÀ¸¸é stuinfo ÀÇ µ¥ÀÌÅÍ¸¦ ¸ÕÀú »èÁ¦ÈÄ studentÀÇ µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÒ¼ö ÀÖ´Ù
+--student(ë¶€ëª¨í…Œì´ë¸”) ì˜ num = 1ì¸ ë°ì´í„° ì‚­ì œí•´ë³´ì
+--ORA-02292: ë¬´ê²°ì„± ì œì•½ì¡°ê±´(ANGEL.INFO_FK_NUM)ì´ ìœ„ë°°ë˜ì—ˆìŠµë‹ˆë‹¤- ìì‹ ë ˆì½”ë“œê°€ ë°œê²¬ë˜ì—ˆìŠµë‹ˆë‹¤
+--ì´ê²½ìš° ë§Œì•½ ì‚­ì œë£° í•˜ê³ ì‹¶ìœ¼ë©´ stuinfo ì˜ ë°ì´í„°ë¥¼ ë¨¼ì € ì‚­ì œí›„ studentì˜ ë°ì´í„°ë¥¼ ì‚­ì œí• ìˆ˜ ìˆë‹¤
 delete from student where num = 3;
 
---sub Å×ÀÌºíÀÇ num=3 ¸ÕÀú»èÁ¦ ÈÄ ºÎ¸ğÅ×ÀÌºíÀÇ num=3 À» »èÁ¦ÇØº¸ÀÚ
+--sub í…Œì´ë¸”ì˜ num=3 ë¨¼ì €ì‚­ì œ í›„ ë¶€ëª¨í…Œì´ë¸”ì˜ num=3 ì„ ì‚­ì œí•´ë³´ì
 delete from stuinfo where num = 3;
 delete from student where num = 3;
 
---Å×ÀÌºí Á¦°Å½Ã ¼­ºêÅ×ÀÌºí Á¦°ÅÈÄ ºÎ¸ğÅ×ÀÌºí Á¦°Å
+--í…Œì´ë¸” ì œê±°ì‹œ ì„œë¸Œí…Œì´ë¸” ì œê±°í›„ ë¶€ëª¨í…Œì´ë¸” ì œê±°
 drop table stuinfo;
 drop table student;
 
 --------------------------------------------------------------------------------
---ÀÌ¹ø¿¡´Â ºÎ¸ğÅ×ÀÌºíÀÇ µ¥ÀÌÅÍ »èÁ¦½Ã ¼­ºêÅ×ÀÌºíÀÇ µ¥ÀÌÅÍµµ ÀÚµ¿À¸·Î »èÁ¦µÇµµ·Ï
---¿ÜºÎÅ°¸¦ ¼³Á¤ÇØº¸ÀÚ
---½ÃÄö½º »ı¼º
+--ì´ë²ˆì—ëŠ” ë¶€ëª¨í…Œì´ë¸”ì˜ ë°ì´í„° ì‚­ì œì‹œ ì„œë¸Œí…Œì´ë¸”ì˜ ë°ì´í„°ë„ ìë™ìœ¼ë¡œ ì‚­ì œë˜ë„ë¡
+--ì™¸ë¶€í‚¤ë¥¼ ì„¤ì •í•´ë³´ì
+--ì‹œí€€ìŠ¤ ìƒì„±
 create SEQUENCE seq_shop;
 --shop cart
 create table shop(
@@ -134,7 +134,7 @@ create table shop(
     sang_name varchar2(30),
     sang_price number(10)
 );
---¿ÜºÎÅ° ¼³Á¤½Ã on delete cascade ¸¦ ºÙÀÌ¸é ºÎ¸ğÅ×ÀÌºí »èÁ¦½Ã ÀÚ½ÄÅ×ÀÌºí¿¡ Ãß°¡µÈ µ¥ÀÌÅÍµµ »èÁ¦µÊ
+--ì™¸ë¶€í‚¤ ì„¤ì •ì‹œ on delete cascade ë¥¼ ë¶™ì´ë©´ ë¶€ëª¨í…Œì´ë¸” ì‚­ì œì‹œ ìì‹í…Œì´ë¸”ì— ì¶”ê°€ëœ ë°ì´í„°ë„ ì‚­ì œë¨
 
 create table cart(
     cart_no number(3) CONSTRAINT cart_pk_no PRIMARY key,
@@ -144,37 +144,37 @@ create table cart(
     CONSTRAINT cart_fk_no foreign key(sang_no) references shop(sang_no) on delete cascade
 );
 
---5°³ÀÇ »óÇ°À» µî·ÏÇØº¸ÀÚ
-insert into shop values (seq_shop.nextval, 'ºí¶ó¿ì½º',120000);
-insert into shop values (seq_shop.nextval, 'Á¶³¢',15000);
-insert into shop values (seq_shop.nextval, 'Ã»¹ÙÁö',78000);
-insert into shop values (seq_shop.nextval, 'ÄÚÆ®',350000);
-insert into shop values (seq_shop.nextval, 'Æ¼¼ÅÃ÷',55000);
+--5ê°œì˜ ìƒí’ˆì„ ë“±ë¡í•´ë³´ì
+insert into shop values (seq_shop.nextval, 'ë¸”ë¼ìš°ìŠ¤',120000);
+insert into shop values (seq_shop.nextval, 'ì¡°ë¼',15000);
+insert into shop values (seq_shop.nextval, 'ì²­ë°”ì§€',78000);
+insert into shop values (seq_shop.nextval, 'ì½”íŠ¸',350000);
+insert into shop values (seq_shop.nextval, 'í‹°ì…”ì¸ ',55000);
 commit;
 
---3°³ÀÇ Á¦Ç°À» Ä«Æ®¿¡ ´ã¾Æº¸ÀÚ
+--3ê°œì˜ ì œí’ˆì„ ì¹´íŠ¸ì— ë‹´ì•„ë³´ì
 insert into cart values (seq_shop.nextval,2,3,sysdate);
 insert into cart values (seq_shop.nextval,3,1,'2023-01-13');
 insert into cart values (seq_shop.nextval,5,3,sysdate);
 commit;
 
---Á¶È¸
--- sang_no »óÇ°¹øÈ£, »óÇ°¸í, ´Ü°¡, ¼ö·® , ±¸ÀÔÀÏ(³â4 - ¿ù2 - ÀÏ2 Çü½ÄÀ¸·ÎÃâ·Â)
-select sh.sang_no ½ÃÄö½º, sh.sang_name »óÇ°¸í,to_char(sh.sang_price,'L999,999') ´Ü°¡, ct.cnt ¼ö·®, to_char(ct.cartday,'yyyy-mm-dd') ±¸ÀÔÀÏ
+--ì¡°íšŒ
+-- sang_no ìƒí’ˆë²ˆí˜¸, ìƒí’ˆëª…, ë‹¨ê°€, ìˆ˜ëŸ‰ , êµ¬ì…ì¼(ë…„4 - ì›”2 - ì¼2 í˜•ì‹ìœ¼ë¡œì¶œë ¥)
+select sh.sang_no ì‹œí€€ìŠ¤, sh.sang_name ìƒí’ˆëª…,to_char(sh.sang_price,'L999,999') ë‹¨ê°€, ct.cnt ìˆ˜ëŸ‰, to_char(ct.cartday,'yyyy-mm-dd') êµ¬ì…ì¼
 from shop sh, cart ct
 where sh.sang_no = ct.sang_no;
 
---cart¿¡ ´ã±âÁö ¾ÊÀº »óÇ°ÀÇ »óÇ°¹øÈ£¿Í »óÇ°¸í Ãâ·Â
-select sh.sang_no ½ÃÄö½º, sh.sang_name »óÇ°¸í,to_char(sh.sang_price,'L999,999') ´Ü°¡, ct.cnt ¼ö·®, to_char(ct.cartday,'yyyy-mm-dd') ±¸ÀÔÀÏ
+--cartì— ë‹´ê¸°ì§€ ì•Šì€ ìƒí’ˆì˜ ìƒí’ˆë²ˆí˜¸ì™€ ìƒí’ˆëª… ì¶œë ¥
+select sh.sang_no ì‹œí€€ìŠ¤, sh.sang_name ìƒí’ˆëª…,to_char(sh.sang_price,'L999,999') ë‹¨ê°€, ct.cnt ìˆ˜ëŸ‰, to_char(ct.cartday,'yyyy-mm-dd') êµ¬ì…ì¼
 from shop sh, cart ct
 where sh.sang_no = ct.sang_no(+) and ct.cnt is null;
 
---»èÁ¦ È®ÀÎ(2,3,5 »óÇ°ÀÌ cart¿¡ ´ã°ÜÀÖÀ½)
---shop ÀÇ 2¹ø 3¹ø »óÇ°À» »èÁ¦ÈÄ cart Å×ÀÌºí È®ÀÎ
---cartÅ×ÀÌºí¿¡¼­ ÀÚµ¿»èÁ¦
+--ì‚­ì œ í™•ì¸(2,3,5 ìƒí’ˆì´ cartì— ë‹´ê²¨ìˆìŒ)
+--shop ì˜ 2ë²ˆ 3ë²ˆ ìƒí’ˆì„ ì‚­ì œí›„ cart í…Œì´ë¸” í™•ì¸
+--cartí…Œì´ë¸”ì—ì„œ ìë™ì‚­ì œ
 delete from shop where sang_no = 2 or  sang_no = 3;
 
---¿À´Ã ¿¬½ÀÇÑ ¸ğµç Å×ÀÌºí°ú ½ÃÄö½º¸¦ Á¦°Å
+--ì˜¤ëŠ˜ ì—°ìŠµí•œ ëª¨ë“  í…Œì´ë¸”ê³¼ ì‹œí€€ìŠ¤ë¥¼ ì œê±°
 delete from shop;
 delete from cart;
 drop SEQUENCE seq1;
