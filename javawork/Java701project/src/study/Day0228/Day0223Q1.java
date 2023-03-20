@@ -23,6 +23,22 @@ public class Day0223Q1 {
 			}
 		}
 		System.out.println("합계는 " + sum + " 총 " + nums + "개");
+		
+		//버블정렬 알고리즘
+		int[] arr = new int[]{3,6,41,2,4,1,5,743};
+		
+		for(int i = 0; i < arr.length; i++) {
+	        for(int j = 0 ; j < arr.length - i - 1 ; j++) {
+	            if(arr[j] > arr[j+1]) {
+	                int temp = arr[j+1];
+	                arr[j+1] = arr[j];
+	                arr[j] = temp;
+	            }
+	        }
+	    }
+		    for(int i : arr) { 
+		        System.out.print(i+" ");
+		    }
 
 	}
 
