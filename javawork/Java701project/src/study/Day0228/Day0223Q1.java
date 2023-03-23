@@ -39,7 +39,12 @@ public class Day0223Q1 {
 		    for(int i : arr) { 
 		        System.out.print(i+" ");
 		    }
-
+		   int a = 0;
+		   for (int i = 1; i <= 100; i++) {
+			a +=i;
+		}
+		   System.out.println(a);
 	}
+	
 
 }
