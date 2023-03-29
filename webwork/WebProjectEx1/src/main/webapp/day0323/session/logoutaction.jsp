@@ -3,6 +3,6 @@
 <%
 	session.removeAttribute("loginstate");
 
-	response.sendRedirect("sessionmain.jsp");
+	response.sendRedirect("main.jsp");
 
 %>
