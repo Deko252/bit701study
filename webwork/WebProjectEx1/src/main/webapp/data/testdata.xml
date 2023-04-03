@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bitcamp>
+	<sawon no="1">
+		<buseo>홍보부</buseo>
+		<pay sudang = "2000">1000</pay>
+	</sawon>
+	<sawon no="2">
+		<buseo>영업부</buseo>
+		<pay sudang = "5000">2000</pay>
+	</sawon>
+	<sawon no="3">
+		<buseo>관리부</buseo>
+		<pay sudang = "1000">7000</pay>
+	</sawon>
+	<sawon no="4">
+		<buseo>인사부</buseo>
+		<pay sudang = "3000">3000</pay>
+	</sawon>
+	<sawon no="5">
+		<buseo>마케팅부</buseo>
+		<pay sudang = "6000">5000</pay>
+	</sawon>
+</bitcamp>
