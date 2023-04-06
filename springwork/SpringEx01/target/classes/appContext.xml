@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<!-- 1 -->
+	<bean id="mes1" class="Study1.Message01" scope="prototype"/>
+	<bean id="mes2" class="Study1.Message02"/>
+	
+	<!-- 2 -->
+	<!-- 생성자 주입 -->
+	<bean id="my" class="Study2.MyInfo">
+		<constructor-arg value="이미자"></constructor-arg>
+		<constructor-arg value="24"></constructor-arg>
+		<constructor-arg>
+			<value>저는 여행을 좋아해요</value>
+		</constructor-arg>
+	</bean>
+	<!-- 생성자에 my 레퍼런스값 주입, 학교는 setter 주입 -->
+	<bean id="stu" class="Study2.Student">
+		<constructor-arg ref="my"></constructor-arg>
+		<property name="schoolName" value="청담고등학교"></property>
+	</bean>
+	
+	<!-- 3 -->
+	<bean id="shop" class="Study3.MyShop">
+		<constructor-arg>
+			<value>치킨</value>
+		</constructor-arg>
+		<property name="su" value="5"></property>
+		<property name="dan" value="32000"></property>
+	</bean>
+	
+	<bean id="person" class="Study3.Person">
+		<constructor-arg>
+			<value>둘리</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>강남구 역삼동</value>
+		</constructor-arg>
+		<property name="myShop" ref="shop"></property>
+	</bean>
+	
+	<!-- 4 -->
+	<bean id="kTire" class="Study4.KoreaTire"></bean>
+	<bean id="cTire" class="Study4.CanadaTire"></bean>
+	
+	<bean id="car1" class="Study4.Car"> 
+		<constructor-arg ref="kTire"></constructor-arg>
+	</bean>
+	<bean id="car2" class="Study4.Car"> 
+		<constructor-arg ref="cTire"></constructor-arg>
+	</bean>
+</beans>
