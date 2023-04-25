@@ -12,8 +12,14 @@ public class BoardDto {
 	private Timestamp writeday;
 	private String name;
 	private String photo;
+	private int acount;
 	
-	
+	public int getAcount() {
+		return acount;
+	}
+	public void setAcount(int acount) {
+		this.acount = acount;
+	}
 	public int getIdx() {
 		return idx;
 	}

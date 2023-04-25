@@ -58,7 +58,7 @@
 				</tr>
 				<tr>
 					<td>
-						<textarea name="content" style="width:  100%; height: 100px;" class="formm-control" required="required" placeholder="내용을 입력해 주세요">${dto.subject }</textarea>
+						<textarea name="content" style="width:  100%; height: 100px;" class="formm-control" required="required" placeholder="내용을 입력해 주세요">${dto.content }</textarea>
 					</td>
 				</tr>
 				<tr>

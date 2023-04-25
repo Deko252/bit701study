@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import board.dao.AnswerDao;
 import board.dao.BoardDao;
 import board.dao.MemberDao;
 import board.dto.BoardDto;
@@ -34,6 +35,9 @@ public class BoardController {
 	
 	@Autowired
 	BoardDao boardDao;
+	
+	@Autowired
+	AnswerDao answerDao;
 	
 	@PostMapping("board/addboard")
 	private String insertBoard(
@@ -121,7 +125,7 @@ public class BoardController {
 		//게시판의 총 글 갯수 얻기
 		int totalCount = boardDao.getTotalCount();
 		int totalPage;//총 페이지수
-		int perPage = 3;//한페이지당 보여질 글 갯수
+		int perPage = 5;//한페이지당 보여질 글 갯수
 		int perBlock = 3;//한 블럭당 보여질 페이지의 갯수
 		int startNum; //각페이지에서 보여질 글의 시작번호
 		int startPage;//각 블럭에서 보여질 시작페이지 번호
@@ -165,6 +169,10 @@ public class BoardController {
 			}
 			//bdto에 저장
 			bdto.setName(name);
+			
+			//댓글 갯수 acount에 저장
+			int acount = answerDao.getAllAnswers(bdto.getIdx()).size();
+			bdto.setAcount(acount);
 			
 		}
 		
@@ -215,9 +223,9 @@ public class BoardController {
 		return "board/content";
 	}
 	@GetMapping("/board/delete")
-	public String deleteBoard(@RequestParam int idx) {
+	public String deleteBoard(@RequestParam int idx,@RequestParam int currentPage) {
 		boardDao.deleteOfBoard(idx);
-		return "redirect:list";
+		return "redirect:list?currentPage=" + currentPage;
 	}
 	
 	@GetMapping("/board/updateform")

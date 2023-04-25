@@ -75,6 +75,9 @@
 							<!-- 사진이 있을경우 아이콘 출력 -->
 							<c:if test="${dto.images != 'no' }">
 								<i class="bi bi-images"></i>
+							</c:if>&nbsp;
+							<c:if test="${dto.acount > 0 }">
+							<span class="acount" style="color:red">(${dto.acount })</span>
 							</c:if>
 						</a>
 					</td>
