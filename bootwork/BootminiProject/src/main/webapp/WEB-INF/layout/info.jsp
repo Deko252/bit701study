@@ -16,18 +16,18 @@
 	body, body *{
 		font-family: 'Jua'
 	}
-	div{
+	.user{
 		text-align: center;
 		width: 300px;
 	}
-	div .infoimg{
+	.user .infoimg{
 		width: 250px;
 	}
 </style>
 </head>
 <c:set var="root" value="<%=request.getContextPath() %>"></c:set>
 <body>
-	<div>
+	<div class="user">
 		<img class="infoimg" alt="" src="${root }/photo/9.jpg">
 		<div>이름 : 김첨지</div>	
 		<div><i class="bi bi-telephone"></i> 010-9939-9967</div>

@@ -80,14 +80,37 @@ public class BoardService implements BoardServiceInter{
 	@Override
 	public void updateReadcount(int num) {
 		// TODO Auto-generated method stub
-		
+		boardMapper.updateReadcount(num);	
 	}
 
 	@Override
 	public BoardDto getData(int num) {
 		// TODO Auto-generated method stub
-		return null;
+		return boardMapper.getData(num);	
 	}
 		
+	@Override
+	public boolean isEqualPass(int num, String pass) {
+		// TODO Auto-generated method stub
+		Map<String, Object> map = new HashMap<>();
+		map.put("num", num);
+		map.put("pass", pass);
+		//System.out.println(pass);
+		//비밀번호가 맞으면 1->true반환,틀리면 0->false반환
+		boolean b = boardMapper.isEqualPass(map)==0?false:true;
+		return b;
+	}
+
+	@Override
+	public void deleteBoard(int num) {
+		// TODO Auto-generated method stub
+		boardMapper.deleteBoard(num);
+	}
+	
+	@Override
+	public void updateBoard(BoardDto dto) {
+		// TODO Auto-generated method stub
+		boardMapper.updateBoard(dto);
+	}
 	
 }

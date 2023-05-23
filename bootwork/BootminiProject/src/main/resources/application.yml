@@ -7,7 +7,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://localhost:3306/bit701?serverTimezone=Asia/Seoul
-    url: jdbc:mysql://db-g66n6-kr.vpc-pub-cdb.ntruss.com:3306/bit701?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://db-g66n6-kr.vpc-pub-cdb.ntruss.com:3306/bit701?serverTimezone=Asia/Seoul #내꺼
+    #url: jdbc:mysql://db-g66k8-kr.vpc-pub-cdb.ntruss.com:3306/bit701?serverTimezone=Asia/Seoul #선생님꺼
     username: study
     password: bit123!@#
   servlet:

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d205ca75-84c1-438c-8390-ea456866d585" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/controller/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/controller/GuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/controller/ShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/mapper/BoardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/service/BoardServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/java/boot/study/service/BoardServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/resources/mapper/BoardSql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/resources/mapper/BoardSql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/resources/naver.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/resources/naver.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/board/boardform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/board/boardform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/board/boardlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/board/boardlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/guest/guestlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/guest/guestlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/layout/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/layout/info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/shop/shopdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/shop/shopdetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/shop/shoplist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/shop/shoplist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/shop/shoplist2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BootminiProject/src/main/webapp/WEB-INF/shop/shoplist2.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2OuiLxoidzeC9nPaBhgPOaBQRD6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Bit701Naver/Semi/DreamStay",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "spring.configuration.checksum": "57b36f17b67b100d66eefe82e0a38bfa",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Maven.BootMiniProject [clean,insall]">
+    <configuration name="BootMiniProject [clean,insall]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="insall" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="BootminiProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BootMiniProject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="bit.study.main.BootminiProjectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.73" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.73" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="BootMiniProject:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/BootMiniProject_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="01688ddf-2524-4890-a9b2-40b5ad21b0e0" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="14769" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="BootMiniProject:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.BootMiniProject [clean,insall]" />
+      <item itemvalue="Spring Boot.BootminiProjectApplication" />
+      <item itemvalue="Tomcat 서버.Tomcat 9.0.73" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d205ca75-84c1-438c-8390-ea456866d585" name="Changes" comment="" />
+      <created>1682416816714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682416816714</updated>
+      <workItem from="1682416817651" duration="1729000" />
+      <workItem from="1682475651843" duration="7000" />
+      <workItem from="1682665800514" duration="244000" />
+      <workItem from="1682666067769" duration="142000" />
+      <workItem from="1682941940518" duration="2000" />
+      <workItem from="1682942011867" duration="121000" />
+      <workItem from="1682988254171" duration="495000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

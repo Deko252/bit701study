@@ -27,6 +27,7 @@ public class ShopController {
 	
 	//버켓이름지정
 	private String bucketName="bit701-bucket-114";//각자 자기 버켓이름
+	//private String bucketName="bit701-bucket-56"; //선생님꺼
 	
 	@Autowired
 	private NcpObjectStorageService storageService;

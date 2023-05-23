@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Refresh" content="10;url=./list"><!-- 10초에 한번씩 -->
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -52,8 +53,20 @@
 					
 					<!-- 제목 -->
 					<td>
-						<a href="content?idx=${dto.num }&currentPage=${currentPage }" style="color: black; text-decoration: none; cursor: pointer;">
+					<!-- depth 1당 빈칸 2개 띄우기 -->
+					<c:forEach begin="1" end="${dto.depth }">
+						&nbsp;&nbsp;
+					</c:forEach>
+					<!-- 답글일 경우에만 앞에 답글 이미지 넣기 -->
+					<c:if test="${dto.depth > 0 }">
+						<img alt="" src="../photo/re.png">
+					</c:if>
+						<a href="content?num=${dto.num }&currentPage=${currentPage }" style="color: black; text-decoration: none; cursor: pointer;">					
+							<!-- 제목이 길경우 200px 만나오고 말줄임표... -->
+							<span style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: inline-block; max-width: 220px;">
 							${dto.subject }
+							</span>
+							
 							<!-- 사진이 있을경우 아이콘 출력 -->
 							<c:if test="${dto.filename != '' }">
 								<i class="bi bi-images"></i>

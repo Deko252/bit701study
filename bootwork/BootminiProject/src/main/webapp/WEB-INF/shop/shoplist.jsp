@@ -2,11 +2,13 @@
    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>   
+<%@ include file="../commonaver.jsp" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Refresh" content="10;url=./list"><!-- 10초에 한번씩 -->
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +41,8 @@
 		<tr>
 			<td align="center" style="text-align: center; line-height: 58px;" >${i.count }</td>
 			<td>
-				<img border="1" hspace="10" alt="" src="http://zxdpdthcmjxj16981873.cdn.ntruss.com/shop/${dto.photo }?type=f&w=40&h=40&faceopt=true&ttype=png"><br>
+				<%-- <img border="1" hspace="10" alt="" src="http://zxdpdthcmjxj16981873.cdn.ntruss.com/shop/${dto.photo }?type=f&w=40&h=40&faceopt=true&ttype=png"> --%> <!-- 내꺼 -->
+				<img border="1" hspace="10" alt="" src="http://${imageUrl_small }/shop/${dto.photo }?type=f&w=40&h=40&faceopt=true&ttype=png"><!-- 선생님꺼 -->
 				<b>${dto.sangpum }</b>
 			</td>
 			<td style="text-align: center; line-height: 58px; background-color: ${dto.color }">${dto.color }</td>

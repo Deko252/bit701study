@@ -2,6 +2,7 @@
    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>   
+<%@ include file="../commonaver.jsp" %>
 
 <!DOCTYPE html>
 <html>
@@ -38,7 +39,8 @@
 	</tr>
 		<tr>
 			<td align="center">
-				<img class="detailimg" alt="" src="https://kr.object.ncloudstorage.com/bit701-bucket-114/shop/${dto.photo }">
+				<%-- <img class="detailimg" alt="" src="https://kr.object.ncloudstorage.com/bit701-bucket-114/shop/${dto.photo }"> --%><!-- 내꺼 -->
+				<img class="detailimg" alt="" src="https://${imageUrl }/shop/${dto.photo }"><!-- 선생님꺼 -->
 			</td>
 		</tr>
 		<tr>
@@ -95,7 +97,7 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-       	<img id="modalphoto" src="http://zxdpdthcmjxj16981873.cdn.ntruss.com/shop/${dto.photo }?type=f&w=160&h=160&faceopt=true&ttype=jpg" border="5" style="border-radius: 50px; border-color: gray;">
+       	<img id="modalphoto" src="http://${imageUrl_small }/shop/${dto.photo }?type=f&w=160&h=160&faceopt=true&ttype=jpg" border="5" style="border-radius: 50px; border-color: gray;">
       
       <!-- 카메라 모양 -->
   		<i class="bi bi-camera-fill update-photo" style="position: absolute; left: 195px; top: 145px; font-size: 22px;"></i>    
@@ -152,7 +154,7 @@
 
       <!-- Modal body -->
       <div class="modal-body" style="width: 500px">
-       	<img id="modalphoto" src="http://zxdpdthcmjxj16981873.cdn.ntruss.com/shop/${dto.photo }?type=f&w=160&h=160&faceopt=true&ttype=jpg" border="2" style="border-radius: 100px; border-color: gray;">
+       	<img id="modalphoto" src="http://${imageUrl_small }/shop/${dto.photo }?type=f&w=160&h=160&faceopt=true&ttype=jpg" border="2" style="border-radius: 100px; border-color: gray;">
 		<br>
 		<br>
 		<form id="updateform">
