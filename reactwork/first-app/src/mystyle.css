@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu&family=Hi+Melody&family=Nanum+Pen+Script&family=Single+Day&display=swap');
+
+.title{
+    font-family: "Hi Melody";
+    font-size: 25px;
+    border: groove pink;
+    background-color: #61dafb;
+    text-align: center;
+}
+.photo{
+    box-shadow: 5px 5px 5px orange;
+    border: 5px inset gray;
+    width: 200px;
+}
+
+.msg1{
+    font-family: "Gaegu";
+    font-size: 20px;
+    color: greenyellow;
+    text-shadow: 3px 3px 3px gray;
+}
+
+.stylenum{
+    font-size: 60px;
+    color: red;
+    text-shadow: 3px 3px 3px gray;
+    font-family: "Single Day";
+}
