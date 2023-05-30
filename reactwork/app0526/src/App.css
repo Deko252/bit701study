@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+.App *{
+  font-family: "Jua";
+}
+h5.one {
+  color: yellow;
+}
+h5.two{
+  text-shadow: 2px 2px 2px black;
+}
+label{
+  cursor: pointer;
+}
+
+.H1{
+  border: 1px solid black;
+  padding: 30px;
+  background-color: aqua;
+}
+
+.circle{
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  margin-right: 5px;
+  border-radius: 100px;
+  box-shadow: 3px 3px 3px gray;
+  float: left;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.photo{
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+  height: 200px;
+  border: 5px solid orange;
+  border-radius: 20px;
+  background-color: pink;
+}
