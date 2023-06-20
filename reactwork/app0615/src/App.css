@@ -1,0 +1,59 @@
+.nav_category{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  list-style: none;
+  width:100%;
+  position: absolute;
+  margin: 0;
+}
+
+
+.nav_container{
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: 165px;
+  max-width: 1256px;
+  /* margin: 0 auto; */
+  margin-top:5%;
+  box-sizing: border-box;
+}
+
+
+img.imgcategory {
+  width: 90px;
+  height: 80px;
+}
+img.imgcategory:hover {
+  cursor: pointer;
+}
+
+.rowstyle{
+  width: 200px;
+  height: 300px;
+  border: 3px solid palevioletred;
+  border-radius: 30px;
+  background-color: pink;
+  padding-left: 10px;
+  padding-top: 10px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.rowstyle img {
+  width: 170px;
+  height: 180px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+.memolist {
+  width: 400px;
+  height: 120px;
+  border: 2px solid gray;
+  padding: 10px;
+  margin-bottom: 10px;
+}

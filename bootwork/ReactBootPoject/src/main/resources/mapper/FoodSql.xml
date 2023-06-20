@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="data.mapper.FoodMapper">
+	<insert id="insertFood" parameterType="FoodDto">
+		insert into myfood values (null,#{fname},#{fphoto},#{fhp},#{fcontent},#{bookingday},now())
+	</insert>
+	<select id="getAllFood" resultType="FoodDto">
+		select * from myfood order by num
+	</select>
+</mapper>

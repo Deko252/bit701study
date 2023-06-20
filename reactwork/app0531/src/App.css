@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.rowStyle{
+  text-align: left;
+  width: 500px;
+  height: 130px;
+  border: 3px solid gray;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+
+.rowStyle .day{
+  float: right;
+  color: #bbb;
+  font-size: 0.8em;
+}
